@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROSEN</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+    <section class="modal1">
+        <div class="modal1_container">
+            <h2 class="modal1_title">Mas Información</h2>
+            <img src="images/agricola.png" class="modal1_img">
+                <p class="modal1_paragraph">En nuestro sitio web, te ofrecemos los mejores productos. Contamos con una amplia variedad de productos agrícolas, como fresas, tomates y cebollas, así como productos de origen animal, incluyendo lácteos, huevos y flores como rosas, margaritas y astromelias. Todos nuestros productos son de excelente calidad.</p>
+            <a href="#" class="modal1_close">Cerrar</a>
+        </div>
+    </section>
+
+    <span class="ir-arriba">
+      <script>
+        $(document).ready(function() {
+
+$('.ir-arriba').click(function() {
+    $('body, html').animate({
+        scrollTop: '0px'
+    }, 300);
+});
+
+$(window).scroll(function(){
+    if( $(this).scrollTop() > 0 ){
+        $('ir-arriba').slideDown(300);
+    } else {
+        $('ir-arriba').slideUp(300);
+    }
+});
+
+});
+      </script>
+        <img class="imgir-arriba" src="images/ir-arriba.png" alt="flecha hacia arriba">
+    </span>
+
+    <header>
+
+        <div id="inico" class="menu container">
+
+            <img class="logo-1" src="images/logo.svg" alt="logo">
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="icono menu">
+            </label>
+            <nav class="navbar">
+
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu-2">
+                    <ul>
+                      <li><a href="#acerca">Acerca de</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#ubicanos">Ubicanos</a></li>
+                    </ul>
+                </div>
+
+                <img class="logo-2" src="images/logo.svg" alt="Logosena">
+
+            </nav>
+        </div>
+
+        <div class="header-content container">
+
+            <div class="swiper mySwiper-1">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Productos Organicos</h1>
+                                <p>
+                                    Productos vegetales, animales o derivados, cultivados y criados naturalmente.
+                                </p>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/organicos.png" alt="organicos">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Productos de Flora</h1>
+                                <p>
+                                    Cultivos florales de varios tipos, para jardines y decoraciones.
+                                </p>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/flora.png" alt="flora">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Productos animales</h1>
+                                <p>
+                                    Partes de animales en estado natural o procesados.
+                                </p>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/animal.png" alt="animal">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="header-content1 container">
+
+            <div class="header1-txt">
+                <h1><span>Bienvenido a</span> AGROSEN </h1>
+                <p>
+                    Bienvenido a Agrosen, sabemos lo que quieres y aqui lo tenemos, lo mejor de frutas, verduras y productos de origen animal para ti.
+                </p>
+                <div class="botones">
+                    <a href="#" class="btn-2"> Mas Información</a>
+                </div>
+            </div>
+            <div class="header1-img">
+                <img src="images/cultivo.jpg" alt="cultivo">
+            </div>
+    
+        </div>
+
+    </header>
+
+    <main class="products container" id="productos">
+        <h2>Productos</h2>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="product-details">
+                <h3 id="modal-product-title">Título del producto</h3>
+                <img src="" alt="" id="modal-product-image">
+                <p id="modal-product-description">Descripción del producto</p>
+              </div>
+              <button id="confirmar-btn" class="btn-3">Confirmar compra</button>
+            </div>
+        </div>
+    
+        <div id="formulario" class="modal2">
+            <div class="modal2-content">
+              <span class="close">&times;</span>
+              <h3>Formulario de compra</h3>
+              <form>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="off" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="off" required>
+                <br>
+                <label for="direccion">Dirección de envío:</label>
+                <input type="text" id="direccion" name="direccion" autocomplete="off" required>
+                <br>
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" autocomplete="off" required>
+                <br>
+                <button type="submit" class="btn-3">Comprar</button>
+              </form>
+            </div>
+          </div>          
+
+        <div class="box-container" id="lista-1">
+            <div class="box">
+                <img src="images/cerezas.png" alt="Imagen producto 1">
+                <div class="product-txt">
+                  <h3>Orgánico</h3>
+                  <p>Cerezas</p>
+                  <button class="comprar-btn btn-3" data-title="Cerezas Orgánicas" data-img="images/cerezas.png" data-description="Estas son cerezas orgánicas cultivadas sin pesticidas ni químicos, son ricas en antioxidantes y aportan beneficios para la salud cardiovascular.">Comprar</button>
+                </div>
+            </div>
+    
+            <div class="box">
+                <img src="images/fresas.png" alt="Imagen producto 2">
+                <div class="product-txt">
+                  <h3>Orgánico</h3>
+                  <p>Fresas</p>
+                  <button class="comprar-btn btn-3" data-title="Fresas Orgánicas" data-img="images/fresas.png" data-description="Estas son fresas orgánicas cultivadas sin pesticidas ni químicos y son una excelente fuente de vitamina C y antioxidantes.">Comprar</button>
+                </div>
+            </div>
+    
+          <div class="box">
+            <img src="images/lechuga.png" alt="Imagen producto 3">
+            <div class="product-txt">
+              <h3>Organicos</h3>
+              <p>Lechuga</p>
+              <button class="comprar-btn btn-3" data-title="Lechuga Orgánica" data-img="images/lechuga.png" data-description="La lechuga es una hortaliza de hojas verdes muy nutritiva y saludable. Nuestras lechugas son cultivadas de manera orgánica sin el uso de pesticidas ni químicos, lo que garantiza su calidad y sabor.">Comprar</button>
+            </div>
+          </div>
+    
+          <div class="box">
+            <img src="images/cebolla.png" alt="Imagen producto 4">
+            <div class="product-txt">
+              <h3>Organicos</h3>
+              <p>Cebolla</p>
+              <button class="comprar-btn btn-3" data-title="Cebolla Orgánica" data-img="images/cebolla.png" data-description="Esta cebolla es cultivada de manera orgánica, sin el uso de pesticidas ni químicos. Además, es rica en nutrientes y tiene un sabor delicioso. ¡Añade un toque de sabor a tus comidas con nuestras cebollas orgánicas!">Comprar</button>
+            </div>
+          </div>
+    
+          <div class="box">
+            <img src="images/cartucho.png" alt="Imagen producto 5">
+            <div class="product-txt">
+              <h3>Floral</h3>
+              <p>Cartuchos</p>
+              <button class="comprar-btn btn-3" data-title="Cartuchos" data-img="images/cartucho.png" data-description="Los cartuchos son flores conocidas por sus intensos colores y forma peculiar.">Comprar</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/clavel.png" alt="Imagen producto 6">
+            <div class="product-txt">
+              <h3>Floral</h3>
+              <p>Clavel</p>
+              <button class="comprar-btn btn-3" data-title="Fresas Orgánicas" data-img="images/clavel.png" data-description="Estas son fresas orgánicas cultivadas sin pesticidas ni químicos.">Comprar</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/margaritas.png" alt="Imagen producto 7">
+            <div class="product-txt">
+              <h3>Floral</h3>
+              <p>Margaritas</p>
+              <button class="comprar-btn btn-3" data-title="Fresas Orgánicas" data-img="images/margaritas.png" data-description="Estas son fresas orgánicas cultivadas sin pesticidas ni químicos.">Comprar</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/rosas.png" alt="Imagen producto 8">
+            <div class="product-txt">
+              <h3>Floral</h3>
+              <p>Rosas</p>
+              <button class="comprar-btn btn-3" data-title="Fresas Orgánicas" data-img="images/rosas.png" data-description="Estas son fresas orgánicas cultivadas sin pesticidas ni químicos.">Comprar</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/queso.png" alt="Imagen producto 9">
+            <div class="product-txt">
+              <h3>Animal</h3>
+              <p>Queso</p>
+              <button class="comprar-btn btn-3" data-title="Queso" data-img="images/queso.png" data-description="Este queso es elaborado con leche de vacas alimentadas con pasto, lo que le da un sabor y textura únicos. Además, es rico en calcio y proteínas.">Comprar</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/carne.png" alt="Imagen producto 10">
+            <div class="product-txt">
+              <h3>Animal</h3>
+              <p>Carne</p>
+              <button class="comprar-btn btn-3" data-title="Carne" data-img="images/carne.png" data-description="Carne de baca muy buena, bien conservada y criada, alta en nutrientes y proteina.">Comprar</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/pollo.png" alt="Imagen producto 11">
+            <div class="product-txt">
+              <h3>Animal</h3>
+              <p>Pollo</p>
+              <button class="comprar-btn btn-3" data-title="Pollo" data-img="images/pollo.png" data-description="Pollo bien criado y conservado con buen sabor y nutrientes perfecto para la cocina.">Comprar</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/huevos.png" alt="Imagen producto 12">
+            <div class="product-txt">
+              <h3>Animal</h3>
+              <p>Rosas</p>
+              <button class="comprar-btn btn-3" data-title="Huevos" data-img="images/huevos.png" data-description="Los huevos son una excelente fuente de proteína y se pueden disfrutar de muchas maneras diferentes.">Comprar</button>
+            </div>
+          </div>
+      
+        </div>
+      
+        <div class="btn-2" id="load-more">Ver más</div>
+        <button class="btn-2" id="hide-last-four">Ver menos</button>
+      </main>
+
+      <section id="modal3" class="modal3-container">
+        <div class="modal3">
+          <button class="modal3-close">&times;</button>
+          <h3>Puntos fuertes</h3>
+          <p><img src="images/arrow-bar-up.svg" alt=""> Tenemos un excelente servicio</p>
+          <p><img src="images/gear.svg" alt=""> Buena calidad e interfaz agradable</p>
+          <p><img src="images/code-slash.svg" alt=""> Buena atencion y servicio</p>
+        </div>
+      </section>
+      
+      <section class="info container" id="acerca">
+        <div class="info-img">
+          <img src="images/grupo.png" alt="">
+        </div>
+        <div class="info-txt">
+          <h2>Acerca de nosotros</h2>
+          <button id="modal-btn" class="btn-2">Saber Más</button>
+        </div>
+      </section>
+
+      <section class="ubicanos" id="ubicanos">
+        <div class="ubicanos-info container">
+          <h2 id="Ubicanos">Ubicanos</h2>
+          <div class="ubicanos-txt">
+            <div class="txt">
+              <h4>Direccion</h4>
+              <p>SENA Mosquera<br>Centro de Biotecnología Agropecuaria (CBA)</p>
+              <p>Cl. 17, Mosquera, Cundinamarca</p>
+            </div>
+            <div class="txt">
+              <h4>Ubicanos</h4>
+              <p>Lunes a Viernes : 7am - 5pm</p>
+              <p>Sabados y Domingos : 7am - 1pm</p>
+            </div>
+            <div class="txt">
+              <h4>Telefono</h4>
+              <p>+56 23212313645</p>
+              <p>+56 12554414645</p>
+            </div>
+            <div class="txt">
+              <h4>Redes Sociales</h4>
+              <div class="socials">
+                <a href="#">
+                  <div class="social">
+                    <img src="images/s1.svg" alt="">
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="social">
+                    <img src="images/s2.svg" alt="">
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="social">
+                    <img src="images/s3.svg" alt="">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+          
+
+    <section>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15905.70642971118!2d-74.215626!3d4.6957037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9d58cf6e291b%3A0x8946ec678fcf04b4!2sSENA%20Mosquera%20-%20Centro%20de%20Biotecnolog%C3%ADa%20Agropecuaria%20(CBA)!5e0!3m2!1ses!2sco!4v1678938868944!5m2!1ses!2sco" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer class="footer container">
+        
+        <div class="derechos">
+            <h4>© - 2023 Unidades-Productivas</h4>
+        </div>
+
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
